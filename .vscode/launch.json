@@ -2,14 +2,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug C++ file",
-            "type": "lldb",
+            "name": "Debug C++ file (g++)",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "C/C++: g++ build active file",
-            "internalConsoleOptions": "openOnSessionStart"
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "C/C++: g++ build active file"
+        },
+        {
+            "name": "Debug C++ file (clang++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ build active file"
         }
     ]
 }
